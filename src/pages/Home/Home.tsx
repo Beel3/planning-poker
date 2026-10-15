@@ -20,13 +20,13 @@ const HomePage = () => {
     <header className={styles.container}>
       <Nav />
       <img className={styles.cards} src="/cards.png" />
-      <h1 className={styles.heading} data-testid="page-title">Online Planning Poker</h1>
-      <p className={styles.subtitle}>Consensus-based group estimating for agile teams.</p>
-      <p><Link className={styles.createButton} to="/create-room">Start a planning session</Link></p>
-      <p className={styles.or}><em>- or -</em></p>
-      <label className={styles.codeInputLabel} htmlFor="room-code-input">Enter a room code:</label>
-      <input id="room-code-input" placeholder="e.g. Big-Hairy-Badgers" className={styles.codeInput} type="text" value={inputCode} onChange={e => setInputCode(e.target.value)}/>
-      <button className={joinButtonStyles} onClick={joinRoom}>Join Game</button>
+      <h1 className={styles.heading} data-testid="page-title">Онлайн-планинг-покер</h1>
+      <p className={styles.subtitle}>Командная оценка задач по консенсусу для агильных команд.</p>
+      <p><Link className={styles.createButton} to="/create-room">Начать сессию оценки</Link></p>
+      <p className={styles.or}><em>— или —</em></p>
+      <label className={styles.codeInputLabel} htmlFor="room-code-input">Код комнаты:</label>
+      <input id="room-code-input" placeholder="напр. Big-Hairy-Badgers" className={styles.codeInput} type="text" value={inputCode} onChange={e => setInputCode(e.target.value)}/>
+      <button className={joinButtonStyles} onClick={joinRoom}>Войти</button>
     </header>
   )
 }

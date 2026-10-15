@@ -28,11 +28,11 @@ const DescriptionInput = () => {
       <div
         contentEditable
         className={styles.input}
-        aria-label="Enter a subject for the current vote"
-        placeholder="What is being voted on?"
+        aria-label="Тема текущего голосования"
+        placeholder="Что оцениваем?"
         onBlur={handleBlur}
       />
-      <p className={styles.tip}><sup>Tip:</sup> You can write links like this:<pre>[link text](https://link-url)</pre></p>
+      <p className={styles.tip}><sup>Совет:</sup> Ссылки можно писать так:<pre>[текст ссылки](https://адрес-ссылки)</pre></p>
     </>
   )
 }

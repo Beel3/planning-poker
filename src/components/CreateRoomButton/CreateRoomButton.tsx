@@ -18,7 +18,7 @@ const CreateRoomButton = () => {
         className={styles.submitButton}
         onClick={handleButtonClick}
       >
-        <b>Create Room</b>
+        <b>Создать комнату</b>
       </button>
     )
   }

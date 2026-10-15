@@ -12,7 +12,7 @@ const ResetRoundButton = () => {
         className={styles.button}
         onClick={() => dispatch(reset())}
       >
-        <b>Start a new round</b>
+        <b>Начать новый раунд</b>
       </button>
     )
   }

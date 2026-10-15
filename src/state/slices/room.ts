@@ -114,12 +114,12 @@ export const {
 function buildPlayerList(state: RoomState) {
   const host = {
     id: state.id!,
-    name: state.owner ? 'You (Host)' : `${state.hostName} (Host)`
+    name: state.owner ? 'Вы (ведущий)' : `${state.hostName} (ведущий)`
   }
   const players = [host]
   const otherPlayers = Object.entries(state.connections).map(([id, name]) => ({ id, name }))
   if (!state.owner) {
-    players.push({ name: 'You', id: Room.MyID! })
+    players.push({ name: 'Вы', id: Room.MyID! })
   }
   return players.concat(otherPlayers)
 }
@@ -163,11 +163,11 @@ function * addConnectionSaga({ payload }: PayloadAction<{id: string, name: strin
   yield call(Room.DispatchToClient, payload.id, updateCardsAction)
   yield call(Room.DispatchToClient, payload.id, updateHostNameAction)
   yield call(Room.DispatchToClient, payload.id, updateConnectionsAction)
-  yield call(toast, `${payload.name} joined`)
+  yield call(toast, `Новый игрок: ${payload.name}`)
 }
 
 function * removeConnectionSaga({ payload }: PayloadAction<{id: string, name: string}>) {
-  yield call(toast, `${payload.name} left`)
+  yield call(toast, `Игрок покидает комнату: ${payload.name}`)
 }
 
 export function * roomSaga() {

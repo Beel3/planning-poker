@@ -12,8 +12,8 @@ const ReviewScreen = () => {
     <header className={styles.root}>
       <Nav />
       <OptionsPanel />
-      <h1>Voting Results</h1>
-      <h2>Most Common: {mostCommon}</h2>
+      <h1>Результаты голосования</h1>
+      <h2>Чаще всего: {mostCommon}</h2>
       <table className={styles.table}>
         <tbody>
           {players.map(player => (

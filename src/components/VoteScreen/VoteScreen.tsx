@@ -26,7 +26,7 @@ const VoteScreen = () => {
             <DescriptionInput />
           </HostTools>
         </div>
-        <h1 className={styles.heading}>Place your vote</h1>
+        <h1 className={styles.heading}>Сделайте ваш выбор</h1>
         <VoteDescription />
         <ul className={styles.cards}>
           {cards.map((card, i) => (

@@ -16,7 +16,7 @@ const NameInput = () => {
     <>
       <header>
         <Nav />
-        <h1 id="heading" data-testid="page-title">Enter your name:</h1>
+        <h1 id="heading" data-testid="page-title">Введите ваше имя:</h1>
         <section className={styles.container}>
           <input
             autoFocus
@@ -32,7 +32,7 @@ const NameInput = () => {
             className={styles.button}
             onClick={handleButtonClick}
           >
-            Confirm Name
+            Подтвердить
           </button>
         </section>
       </header>

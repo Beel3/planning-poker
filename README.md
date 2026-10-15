@@ -2,6 +2,12 @@
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ceuk/planning-poker)
 
+## Русская версия
+
+Форк с интерфейсом, переведённым на русский язык. Оригинальный проект: [ceuk/planning-poker](https://github.com/ceuk/planning-poker) (GPL-3.0).
+Изменены только тексты интерфейса (файлы в `src/`, `public/index.html`, `public/manifest.json`); функциональность не менялась.
+Коды комнат (трёхсловные, вида `Birds-Fly-Gracefully`) остаются английскими — они генерируются пакетом `human-id` и служат идентификаторами.
+
 <p float="left">
   <img src="https://user-images.githubusercontent.com/1681236/165627108-f660c3a1-a15c-46d0-997e-d9831bd60de3.png" width="49.5%" />
   <img src="https://user-images.githubusercontent.com/1681236/165627035-f956d654-b672-42ae-93dd-23484e401a2f.png" width="49.5%" /> 

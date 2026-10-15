@@ -12,7 +12,7 @@ const EndVotingButton = () => {
       disabled={voteCount < 1}
       onClick={() => dispatch(updateStatus(RoundStatus.VIEWING))}
     >
-      <b>End Voting</b>
+      <b>Завершить голосование</b>
     </button>
   )
 }

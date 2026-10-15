@@ -24,7 +24,7 @@ const CreateRoom = () => {
     <>
       <header>
         <Nav />
-        <h1 data-testid="page-title">Create a Planning Session</h1>
+        <h1 data-testid="page-title">Создание сессии оценки</h1>
       </header>
       <div className={styles.container}>
         <HideableFormSection

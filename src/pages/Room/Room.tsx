@@ -45,8 +45,8 @@ const RoomPage = () => {
     return (
       <header>
         <Nav />
-        <h1 data-testid="page-title">Share your room invite!</h1>
-        <p>Share a link to this page with others or give them the room name: <mark className={styles.roomLink}>{roomId}</mark></p>
+        <h1 data-testid="page-title">Пригласите игроков!</h1>
+        <p>Отправьте ссылку на эту страницу другим или назовите им название комнаты: <mark className={styles.roomLink}>{roomId}</mark></p>
       </header>
     )
   }

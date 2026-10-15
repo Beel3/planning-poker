@@ -14,9 +14,9 @@ const OptionsPanel = () => {
   return (
     <div className={classes}>
       <OptionToggle />
-      <h4>Options</h4>
+      <h4>Настройки</h4>
       <button onClick={() => dispatch(removeUserName())} className={styles.simpleButton}>
-        Reset your name
+        Сменить имя
       </button>
     </div>
   )

@@ -7,7 +7,7 @@ const VoteTracker = () => {
   const votes = useAppSelector(state => state.round.votes)
   return (
     <div className={styles.root}>
-      <h3 className={styles.heading}>Voting&hellip;</h3>
+      <h3 className={styles.heading}>Голосование&hellip;</h3>
       <ul className={styles.list}>
         {players.map(player => (
           <li className={styles.row} key={player.id}>

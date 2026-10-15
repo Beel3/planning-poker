@@ -6,7 +6,7 @@ const Loading = () => (
       <div className={styles.cardFront}>5</div>
       <div className={styles.cardBack} />
     </div>
-    <h1 className={styles.heading}>Connecting&hellip;</h1>
+    <h1 className={styles.heading}>Подключение&hellip;</h1>
   </div>
 )
 

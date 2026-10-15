@@ -12,21 +12,21 @@ const CardInput = () => {
   return (
     <div className={styles.container}>
       <label className={styles.label} htmlFor="custom-card-input">
-        Add a card
+        Добавить карту
       </label>
       <input
         autoFocus
         type="text"
         id="custom-card-input"
         className={styles.input}
-        placeholder="Enter a card value"
+        placeholder="Введите значение карты"
         onChange={handleInputChange}
         onKeyUp={handleKeyUp}
         value={inputValue}
         maxLength={15}
       />
       <button onClick={dispatchAddCard} className={styles.button}>
-        Press enter key or click here to add
+        Нажмите Enter или нажмите сюда, чтобы добавить
       </button>
     </div>
   )

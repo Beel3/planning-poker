@@ -7,7 +7,7 @@ const HostTools = ({ children }: PropsWithChildren<{}>) => {
   return isOwner
     ? (
       <div className={styles.root}>
-        <h3>Host Tools</h3>
+        <h3>Инструменты ведущего</h3>
         {children}
       </div>
     )
