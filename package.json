@@ -2,7 +2,7 @@
   "name": "planning-poker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://beel3.github.io/planning-poker",
+  "homepage": ".",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@reduxjs/toolkit": "^1.8.1",
