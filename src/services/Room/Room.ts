@@ -4,6 +4,14 @@ import { PayloadAction } from '@reduxjs/toolkit'
 import { addConnection, createRoomError, joinRoomError, removeConnection, updateConnectionStatus } from '@/state/slices/room'
 import { AppDispatch } from '@/state/store'
 
+/* Рабочие STUN-серверы: дефолтные peerjs (Google STUN, TURN на 0.peerjs.com)
+   из РФ не отвечают — без них прямое WebRTC-соединение между разными
+   сетями не находится и вход в комнату «висит» на Подключение…
+   Проверены пробой: Cloudflare и Nextcloud отвечают мгновенно. */
+const ICE_SERVERS: RTCIceServer[] = [
+  { urls: ['stun:stun.cloudflare.com:3478', 'stun:stun.nextcloud.com:3478'] }
+]
+
 abstract class Room {
   public appDispatch: AppDispatch | null = null
   public peer: Peer | null = null
@@ -44,7 +52,7 @@ class RoomClient extends Room {
 
   constructor(public roomId: string, public userName: string) {
     super(roomId, userName)
-    this.peer = new Peer()
+    this.peer = new Peer(undefined, { config: { iceServers: ICE_SERVERS } })
     this.peer.on('open', this.onPeerOpen.bind(this))
     this.peer.on('error', this.onPeerError.bind(this))
   }
@@ -80,7 +88,7 @@ class RoomHost extends Room {
 
   constructor(public roomId: string, public userName: string) {
     super(roomId, userName)
-    this.peer = new Peer(roomId)
+    this.peer = new Peer(roomId, { config: { iceServers: ICE_SERVERS } })
     this.peer.on('open', this.onPeerOpen.bind(this))
     this.peer.on('error', this.onPeerError.bind(this))
   }
