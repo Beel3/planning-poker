@@ -8,7 +8,7 @@ import { AppDispatch } from '@/state/store'
    из РФ не отвечают — без них прямое WebRTC-соединение между разными
    сетями не находится и вход в комнату «висит» на Подключение…
    Проверены пробой: Cloudflare и Nextcloud отвечают мгновенно. */
-const ICE_SERVERS: RTCIceServer[] = [
+const ICE_SERVERS = [
   { urls: ['stun:stun.cloudflare.com:3478', 'stun:stun.nextcloud.com:3478'] }
 ]
 
