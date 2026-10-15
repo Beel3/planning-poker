@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import Home from '@/pages/Home/Home'
 import Room from '@/pages/Room/Room'
@@ -15,7 +15,7 @@ const App = () => {
     dispatch(updateUserName(storedUserName))
   }
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/room/:roomId" element={<Room />} />
         <Route path="/create-room" element={<CreateRoom />} />
@@ -29,7 +29,7 @@ const App = () => {
         position="bottom-right"
         autoClose={3500}
       />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
